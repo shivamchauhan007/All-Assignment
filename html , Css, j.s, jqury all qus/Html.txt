@@ -1,0 +1,123 @@
+1) Are the HTML tags and elements the same thing? 
+Ans:-    	No, both are different things
+	    <h1> </h1> - this is called tag
+	    <h1> ABC </h1> - this is called elements
+
+
+2) What are tags and attributes in HTML? 
+Ans:-	<h1> </h1> - this is called tag
+	    <h1 align="center"> ABC </h1> - TO change value of elements is called attributes
+
+
+3) What are void elements in HTML? 
+Ans:-	void tages means self closing tag
+	    <br /> <meta /> <img /> <hr />
+
+
+4) What are HTML Entities?
+Ans:-	full name of the symbols is called Entities.
+	    & - &amp;   £ - &pound;   © - &copy;
+
+
+
+5) What are different types of lists in HTML?
+Ans:-	their are 3 types of lists
+	   <ol> </ol> 123, ABC, abc, I II III IV V, i ii iii iv v
+	   <ul> </ul> dot •     circle ●      square ■
+	   <dl> </dl>
+
+
+
+6) What is the ‘class’ attribute in HTML?
+Ans:-	 TO change multiple value of elements is called "class" attributes 
+
+
+
+7) What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML 
+   elements? 
+Ans:-	"id" attribute is only given to ONE time to parent div, section etc ....
+	   "class" attribute is give multiple times to parent div, section, tag, elements ....	
+
+
+
+8) What are the various formatting tags in HTML? 
+Ans:-	<i> <ul> <bold> <strong> are various formating tags
+
+
+
+9) How is Cell Padding different from Cell Spacing? 
+Ans:-	Cell padding - to give proper alignments (space) to contain.
+	    Cell Spacing - to give proper alignments (space) to whole box, division 
+
+
+
+10) How can we club two or more rows or columns into a single row or column in an 
+    HTML table? 
+Ans:- 	club two or more rows - "rowspan"
+	    club two or more columns - "colspan"
+
+
+
+11) What is the difference between a block-level element and an inline element?
+Ans:-	block-level element is block the full line in your browser
+		ex. <address>  <article>  <aside>  <blockquote>  <canvas>  <dd>  <div>  <dl>  <dt>  <fieldset>  <figcaption>  <figure>  footer>  <form>  <h1>-			    <h6>  <header>  <hr>  <li>  <main>  <nav>  <noscript>  <ol>  <p>  <pre>  <section>  <table>  <tfoot>  <ul>  <video>
+	
+	    inline-element is contain only the space which the tags require in line in your browser
+		ex. <a>  <abbr>  <acronym>  <b>  <bdo>  <big>  <br>  <button>  <cite>  <code>  <dfn>  <em>  <i>  <img>  <input>  <kbd> <label>  <map>  <object>     		    <output>  <q>  <samp>  <script>  <select>  <small>  <span>  <strong>  <sub>  <sup>  <textarea>  <time>  <tt>  <var>	
+
+
+
+12) How to create a Hyperlink in HTML? 
+Ans:-    with the help of <a> tag, we can make a hyper link in HTML
+	
+
+
+
+13) What is the use of an iframe tag?
+Ans:-	to play adv, videos, short clips in website with the iFrame tag
+	
+
+
+
+14) What is the use of a span tag? Explain with example? 
+Ans:-      to change the value of specific word/contain in whole sentance
+
+
+
+15) How to insert a picture into a background image of a web page? 
+Ans:-	with the help of style attribute
+	    ex. style="background-image=_______"	
+
+
+
+16) How are active links different from normal links? 
+Ans:-	active links are underline and red in live project
+	    normal links are underline and blue in offline project
+
+
+
+17) What are the different tags to separate sections of text? 
+Ans:-	separate section means break tags, so we can use <br> <p> tags
+
+
+
+18) What is SVG?
+Ans:-	SVG stands for Scalable Vector Graphics. SVG is used to define graphics for the Web. SVG is a W3C recommendation.
+	
+
+
+19) What is difference between HTML and XHTML? 
+Ans:-	we can make seprate/personal tags in XHTML which is not possible in HTML
+
+
+
+20) What are logical and physical tags in HTML?
+Ans:-	Logical tags are used to tell the meaning of the enclosed/bold/highlight text.             					
+		ex. <strong> </strong>
+	
+
+	    Physical tags are used to tell the browser how to display the text enclosed/bold/highlight in the physical tag.
+		ex. <b> <i> <u>
+		
+		
+		

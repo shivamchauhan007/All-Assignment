@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <style>
+        #todo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            border: 1px solid;
+        }
+
+        #task-input,
+        #task-input1,
+        #task-input2 {
+            margin: 10px 0;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            width: 300px;
+        }
+
+        .delete-btn {
+            cursor: pointer;
+            color: red;
+        }
+
+        label {
+            font-size: larger;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="todo-container">
+
+        <table>
+            <tr>
+                <th colspan="2">
+                    <h2>Add list</h2>
+                </th>
+            </tr>
+            <tr>
+                <td><label for="input">Name:-</label></td>
+                <td> <input type="text" id="task-input" placeholder="Enter a name"></td>
+            </tr>
+            <tr>
+                <td><label for="input">Fathername:-</label></td>
+                <td><input type="text" id="task-input1" placeholder="Enter a fathername"></td>
+            </tr>
+            <tr>
+                <td> <label for="input">Surname:-</label></td>
+                <td> <input type="text" id="task-input2" placeholder="Enter a surname"></td>
+            </tr>
+        </table>
+
+
+
+        <button onclick="addTask()">Add Task</button>
+        <ul id="task-list"></ul>
+
+    </div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskInput1 = document.getElementById("task-input1");
+            const taskInput2 = document.getElementById("task-input2");
+            const taskList = document.getElementById("task-list");
+
+            if (taskInput.value.trim() === "") {
+                alert("Please enter a valid task!");
+                return;
+            }
+
+            const taskItem = document.createElement("li");
+            taskItem.className = "task-item";
+
+            const taskText = document.createElement("span");
+            taskText.textContent = taskInput.value;
+            const taskText1 = document.createElement("span");
+            taskText1.textContent = taskInput1.value;
+            const taskText2 = document.createElement("span");
+            taskText2.textContent = taskInput2.value;
+
+
+            const deleteBtn = document.createElement("span");
+            deleteBtn.className = "delete-btn";
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function () {
+                taskList.removeChild(taskItem);
+            };
+
+            taskItem.appendChild(taskText);
+            taskItem.appendChild(taskText1);
+            taskItem.appendChild(taskText2);
+            taskItem.appendChild(deleteBtn);
+
+            taskList.appendChild(taskItem);
+            taskList.appendChild(taskItem1);
+            taskList.appendChild(taskItem2);
+
+            // Clear input field after adding task
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>

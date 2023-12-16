@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider{
+            width: 1000px;
+            height: 900px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto ;
+            /* text-align: center; */
+        }
+        /* .slider img{
+            width: 100%;
+            background-position: center;
+        } */
+        img{
+            transition: 2s;
+            position: absolute;
+            width: 90%;
+        }
+        .nav{
+            text-align: center;
+        }
+        button{
+            margin: 10px;
+            font-size: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+    <img src="/Tops/Denish/IMG/CoffeeAtHome.jpg" class="images" alt="">
+    <img src="/Tops/Denish/IMG/featured.jpg" class="images" alt="">
+    <img src="/Tops/Denish/IMG/Drinks.jpg" class="images" alt="">
+    <img src="/Tops/Denish/IMG/CoffeeAtHome.jpg" class="images" alt="">
+    </div>
+    <div class="nav">
+        <button onclick="goPrev()">prev</button>
+        <button onclick="goNext()">next</button>
+    </div>
+
+<script>
+const abc = document.querySelectorAll(".images")
+let count = 0
+
+abc.forEach(
+    (img, index) => {
+    img.style.left = `${index * 100}%`
+});
+
+const sliderimg = () => {
+    abc.forEach(
+    (img) => {
+    img.style.transform = `translateX(-${count * 100}%)`
+});
+}
+
+const goPrev = () => {
+    count--
+    if (count == -1) {
+        count = 3
+    }
+    sliderimg()
+}
+const goNext = () => {
+    count++
+    if (count >= abc.length) {
+        count = 0
+    }
+    sliderimg()
+}
+
+
+</script>
+
+   
+</body>
+</html>

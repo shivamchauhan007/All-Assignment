@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+}
+
+.jcs {
+    justify-content: space-between;
+}
+
+.alc {
+    align-items: center;
+}
+
+.logo img {
+    width: 50%;
+    padding-top: 3px;
+}
+
+.lin ul .in {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.links a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 23px 0;
+}
+
+.lin a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 23px 0;
+}
+
+.links a:hover,
+.lin a:hover {
+    color: rgb(250, 11, 59);
+    transition:3s;
+}
+
+#B-1 {
+    background-color: red;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+#B-1:hover {
+    background-color: #8b8a87;
+}
+
+.main-hover:hover .main,
+.main-hover:hover .phot,
+.main-hover:hover .s,
+.main-hover:hover .s-1,
+.main-hover:hover .drop,
+.main-hover:hover .drop-1 {
+    display: block;
+    transition: 3s;
+}
+
+.main {
+    display: none;
+    position: absolute;
+    background-color: rgb(192, 5, 5);
+    top: 80px;
+    left: 15px;
+    width: 30%;
+    color: white;
+    padding-left: 20px;
+    transition: 5s;
+}
+
+.main p {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.main h1 {
+    font-size: 70px;
+    display: inline-block;
+    padding-right: 10px;
+    /* border-right: 4px solid white; */
+    /* color: red; */
+    /* width: 0%; */
+    overflow: hidden;
+    animation: text 5s;
+
+}
+
+@keyframes text {
+    0% {
+        width: 0%;
+    }
+
+    60% {
+        width: 63%;
+        color: white;
+    }
+}
+
+.main ul,
+.s ul,
+.s-1 ul {
+    list-style: none;
+}
+
+.main a {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 3s;
+}
+
+.main li {
+    padding: 20px 0;
+}
+
+.main a:hover {
+    color: rgb(0, 255, 174);
+}
+
+.main i {
+    margin: 0 15px 0 0;
+}
+
+.s,
+.s-1 {
+    background-color: white;
+    position: absolute;
+    display: none;
+    top: 80px;
+    left: 490px;
+    padding-bottom: 95px;
+    width: 35%;
+}
+
+.pad {
+    padding-bottom: 93px;
+}
+
+.s i {
+    margin: 20px 20px;
+    font-size: 30px;
+}
+
+.s a,
+.s-1 a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.s a:hover,
+.s-1 a:hover {
+    background-color: #8b8a87;
+    color: rgb(255, 202, 127);
+    transition: all 2s;
+}
+
+.phot {
+    background-image: url(l-rays.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 7.1% 10%;
+    position: absolute;
+    display: none;
+    right: 0px;
+    top: 80px;
+    /* width: 30%; */
+    border-left: solid 0.1px;
+    background-color: white;
+}
+
+.btn {
+    position: absolute;
+    bottom: 45px;
+    left: 140px;
+}
+
+.btn button {
+    background-color: red;
+    border: none;
+    padding: 16px 40px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.btn a:active {
+    color: rgb(47, 255, 220);
+}
+
+.pad-1 {
+    padding-bottom: 53px;
+}
+
+.s-1 i {
+    margin: 15px 20px;
+    font-size: 20px;
+}
+
+span i {
+    position: absolute;
+    right: 0;
+    /* top: 0; */
+    /* padding:20px ; */
+    display: block;
+    /* padding-left: 50px; */
+    transition: 3s;
+    /* margin-left: 60px; */
+}
+
+.s-1 span i:hover {
+    transform: rotate(-90deg);
+    /* padding: 20px; */
+    /* background-color: #8b8a87; */
+}
+
+.drop,
+.drop-1 {
+    position: absolute;
+    display: none;
+    right: 0px;
+    top: 80px;
+    width: 30%;
+    border-left: solid 0.1px;
+    background-color: white;
+}
+
+.drop i {
+    margin: 15px 20px;
+    font-size: 20px;
+}
+
+.drop a,
+.drop-1 a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 0;
+    transition: 1s;
+}
+
+.drop,
+.padding,
+.drop-1 {
+    padding: 100px;
+}
+
+.sp:hover .drop-link,
+.sp:hover .drop-link-2,
+.sp:hover .drop-link-3,
+.sp:hover .drop-link-4,
+.sp:hover .drop-linkk {
+    display: block;
+    /* margin-left: 20px; */
+    transition: 3s;
+}
+
+.drop-link {
+    position: absolute;
+    right: -400px;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.drop-link-2 {
+    position: absolute;
+    right: -300px;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.drop-link-3 {
+    position: absolute;
+    right: -370px;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.drop-link-4 {
+    position: absolute;
+    right: -250px;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.drop button,
+.drop-1 button {
+    /* background-color: red; */
+    /* padding: 15px 0px; */
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    /* transition: 5s; */
+}
+
+.drop button a:hover,
+.drop-1 button a:hover {
+    background-color: red;
+}
+
+.main h2 {
+    font-size: 60px;
+    padding: 6px 0;
+}
+
+.drop-linkk {
+    position: absolute;
+    right: -330px;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.head {
+    padding-bottom: 90px;
+    margin-bottom: 74px;
+}
+
+.head a:hover {
+    background-color: white;
+    color: black;
+}
+
+.head h1 {
+    font-size: 40px;
+    padding: 20px;
+    background-color: aqua;
+    display: inline-block;
+    border-radius: 30%;
+}
+
+.head p {
+    margin: 0 20px;
+}
+
+.head i {
+    display: inline;
+}
+
+.drop-1 img {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    background-color: #2d2c2b;
+}
+
+section {
+    height: 400px;
+    margin-left: 20px;
+    background-color: antiquewhite;
+}

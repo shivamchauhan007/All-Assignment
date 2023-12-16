@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .marksheet {
+            /* display: inline-block; */
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            /* width: 25%; */
+            height: 100vh;
+            /* margin: 0 auto; */
+        }
+
+        table {
+
+            padding: 15px;
+            height: 100px;
+            border: 5px solid;
+
+            /* width: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="marksheet">
+        <table>
+            <tr>
+                <td>
+                    <h3>Marksheet for information technology</h3>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Enter marks</th>
+            </tr>
+            <tr>
+                <td><label for="input">1. C Language</label></td>
+                <td><input type="number" id="s1" onblur="checkvalid(this,'s1Error')" required><span id="s1Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="input">2. C++ Language</label></td>
+                <td><input type="number" id="s2" onblur="checkvalid(this,'s2Error')" required><span id="s2Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="input">3.Database</label></td>
+                <td><input type="number" id="s3" onblur="checkvalid(this,'s3Error')" required><span id="s3Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="input">4. HTML</label></td>
+                <td><input type="number" id="s4" onblur="checkvalid(this,'s4Error')" required><span id="s4Error"></span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="input">5. CSS</label></td>
+                <td><input type="number" id="s5" onblur="checkvalid(this,'s5Error')" required><span id="s5Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="input">6. PHP</label></td>
+                <td><input type="number" id="s6" onblur="checkvalid(this,'s6Error')" required><span id="s6Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="input">7. Core java</label></td>
+                <td><input type="number" id="s7" onblur="checkvalid(this,'s7Error')" required><span id="s7Error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="result">Result</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Total is: <span id="total"></span>/350</p>
+                </td>
+                <td>Percentage is: <span id="per"></span>%</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script>
+        // const result=document.getElementById("result");
+        document.getElementById("result").addEventListener("click", () => {
+            let s1, s2, s3, s4, s5, s6, s7, ans, percent;
+            s1 = parseFloat(document.getElementById("s1").value);
+            s2 = parseFloat(document.getElementById("s2").value);
+            s3 = parseFloat(document.getElementById("s3").value);
+            s4 = parseFloat(document.getElementById("s4").value);
+            s5 = parseFloat(document.getElementById("s5").value);
+            s6 = parseFloat(document.getElementById("s6").value);
+            s7 = parseFloat(document.getElementById("s7").value);
+            ans = s1 + s2 + s3 + s4 + s5 + s6 + s7;
+            total.innerHTML = ans;
+            percent = ans / 7;
+            per.innerHTML = percent;
+            total.style.color = 'red';
+            per.style.color = 'red';
+        })
+        function checkvalid(anything, spnid) {
+            console.log("called", spnid);
+            // console.log("called",anything.value);
+            // let inpData = document.getElementById("username");
+            // let inpData = document.getElementById("username").value
+            // console.log(inpData);
+            if (anything.value == "") {
+                document.getElementById(spnid).innerText = "This field is required!!!";
+            } else {
+                document.getElementById(spnid).innerText = "";
+            }
+        }
+    </script>
+</body>
+</html>

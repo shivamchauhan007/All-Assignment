@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Interval Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        .mt-3 {
+            border: 2px solid rgb(236, 126, 126);
+            background-color: rgb(130, 175, 235);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Date Interval Calculator</h1>
+
+        <div class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" class="form-control" id="startDate">
+        </div>
+
+        <div class="form-group">
+            <label for="endDate">End Date:</label>
+            <input type="date" class="form-control" id="endDate">
+        </div>
+
+        <button class="btn btn-primary" onclick="calculateDateInterval()">Calculate Interval</button>
+
+        <div class="mt-3">
+            <strong>Result:</strong>
+            <ul>
+                <li><strong>Days:</strong> <span id="resultDays"></span></li>
+                <li><strong>Months:</strong> <span id="resultMonths"></span></li>
+                <li><strong>Years:</strong> <span id="resultYears"></span></li>
+                <li><strong>Weeks:</strong> <span id="resultWeeks"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function calculateDateInterval() {
+            var startDate = new Date($('#startDate').val());
+            var endDate = new Date($('#endDate').val());
+
+            if (startDate > endDate) {
+                $('#resultDays').text('End date must be greater than start date.');
+                $('#resultMonths').text('');
+                $('#resultYears').text('');
+                $('#resultWeeks').text('');
+            } else {
+                var interval = endDate - startDate;
+                var days = Math.floor(interval / (1000 * 60 * 60 * 24));
+                var months = calculateMonths(startDate, endDate);
+                var years = calculateYears(startDate, endDate);
+                var weeks = Math.floor(days / 7);
+
+                $('#resultDays').text(days + ' days');
+                $('#resultMonths').text(months + ' months');
+                $('#resultYears').text(years + ' years');
+                $('#resultWeeks').text(weeks + ' weeks');
+            }
+        }
+
+        function calculateMonths(startDate, endDate) {
+            var months;
+            months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+            months -= startDate.getMonth();
+            months += endDate.getMonth();
+            return months <= 0 ? 0 : months;
+        }
+
+        function calculateYears(startDate, endDate) {
+            var years;
+            years = endDate.getFullYear() - startDate.getFullYear();
+            var isAfterBirthday = startDate.getMonth() <= endDate.getMonth() && startDate.getDate() <= endDate.getDate();
+            if (!isAfterBirthday) {
+                years--;
+            }
+            return years <= 0 ? 0 : years;
+        }
+    </script>
+
+</body>
+</html>

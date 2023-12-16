@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .math {
+            /* display: inline-block; */
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            /* width: 25%; */
+            height: 100vh;
+            /* margin: 0 auto; */
+        }
+
+        table {
+
+            padding: 30px;
+            border: 5px solid;
+            height: 200px;
+
+            /* width: 100px; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="math">
+        <table>
+            <tr>
+                <th colspan="2"><strong>Math Operations</strong></th>
+            </tr>
+            <tr>
+                <td> <label for="first_num">Enter 1st number</label></td>
+                <td><input type="text" id="first_num"></td>
+            </tr>
+            <tr>
+                <td><label for="second_num">Enter 2nd number</label></td>
+                <td><input type="text" id="second_num"></td>
+            </tr>
+            <tr>
+                <td> <button type="button" id="add">+</button>
+                    <button type="button" id="subtract">-</button>
+                    <button type="button" id="multiply">*</button>
+                </td>
+                <td>
+                    <p>Answer is: <span id="answer"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" id="divide">/</button>
+                    <button type="button" id="modulus">%</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const answer = document.getElementById("answer");
+
+        document.getElementById("add").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x + y;
+            answer.innerHTML = result;
+        });
+
+
+        document.getElementById("subtract").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x - y;
+            answer.innerHTML = result;
+        });
+
+        document.getElementById("multiply").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x * y;
+            answer.innerHTML = result;
+        });
+
+        document.getElementById("divide").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            if (y === 0) {
+                alert("Cannot divide by zero");
+                answer.innerHTML = "";
+            } else {
+                let result = x / y;
+                answer.innerHTML = result;
+            }
+        });
+
+        document.getElementById("modulus").addEventListener("click", () => {
+            let x = parseInt(document.getElementById("first_num").value);
+            let y = parseInt(document.getElementById("second_num").value);
+            let result = x % y;
+            answer.innerHTML = result;
+
+        });
+        answer.style.color = 'red';
+
+
+
+
+    </script>
+
+    <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateName() {
+            var nameInput = document.getElementById('name').value;
+            return nameInput.trim() !== '';
+        }
+
+        function validateEmail() {
+            var emailInput = document.getElementById('email').value;
+            // You can add more complex email validation logic here
+            return emailInput.includes('@');
+        }
+
+        function validateForm() {
+            var validationFunctions = [validateName, validateEmail];
+            var isFormValid = true;
+
+            for (var i = 0; i < validationFunctions.length; i++) {
+                if (!validationFunctions[i]()) {
+                    isFormValid = false;
+                    // You can add more detailed error handling or messages here
+                    alert('Validation failed for field ' + (i + 1));
+                    break;
+                }
+            }
+
+            return isFormValid;
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+</body>
+</html>

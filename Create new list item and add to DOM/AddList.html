@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addlist {
+            /* display: inline-block; */
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            /* width: 25%; */
+            height: 100vh;
+            /* margin: 0 auto; */
+        }
+
+        table {
+
+            padding: 15px;
+            height: 100px;
+            border: 5px solid;
+
+            /* width: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="addlist">
+
+        <table>
+            <tr>
+                <th colspan="2"><strong>Add List</strong></th>
+            </tr>
+            <tr>
+                <td> <label for="name">name</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="father name">father name</label></td>
+                <td><input type="text" id="father"></td>
+            </tr>
+            <tr>
+                <td><label for="surname">surname</label></td>
+                <td><input type="text" id="surname"></td>
+            </tr>
+            <tr>
+                <td><label for=""></label></td>
+                <td><input type="submit" value="add" onclick="addName()" /></td>
+            </tr>
+
+            <tr id="inputcontainer">
+                <td>
+
+                    <li id="a"></li>
+                    <li id="b"></li>
+                    <li id="c"></li>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+    <!-- Enter Name: <input type="text" name="" id="name" />
+    Enter Father Name : <input type="text" name="" id="father" />
+    Enter surname: <input type="text" name="" id="surname" />
+ -->
+    <!-- <input type="submit" value="add" onclick="addName()" /> -->
+
+
+    <script>
+        let abc = [];
+        let def = [];
+        let ghi = [];
+
+        function addName() {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            abc.push(name);
+            document.getElementById("a").innerHTML = abc;
+
+            let father = document.getElementById("father").value;
+            def.push(father);
+            document.getElementById("b").innerHTML = def;
+
+            let surname = document.getElementById("surname").value;
+            ghi.push(surname);
+            document.getElementById("c").innerHTML = ghi;
+
+            const taskItem = document.createElement("td");
+            taskItem.className = "task-item";
+
+            const taskText = document.createElement("li");
+            taskText.textContent = taskInput.value;
+
+            taskItem.appendChild(taskText);
+            taskList.appendChild(taskItem);
+
+            // Clear input field after adding task
+            taskInput.value = "";
+
+    </script>
+</body>
+</html>

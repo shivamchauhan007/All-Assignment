@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript--Assessment--3--Create new list item and add to DOM
+    </title>
+  </head>
+
+  <body>
+    
+      Enter Name: <input type="text" name="" id="name" /> 
+      Enter Father Name : <input type="text" name="" id="father" /> 
+      Enter surname: <input type="text" name="" id="surname" />
+
+      
+      <ol>
+        <li id="a"></li>
+        <li id="b"></li>
+        <li id="c"></li>
+      </ol>
+      
+      <input type="submit" value="add" onclick="addName()"/>
+    <script>
+      let abc = [];
+      let def = [];
+      let ghi = [];
+
+      function addName() {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        abc.push(name);
+        document.getElementById("a").innerHTML = abc;
+
+        let father = document.getElementById("father").value;
+        def.push(father);
+        document.getElementById("b").innerHTML = def;
+
+        let surname = document.getElementById("surname").value;
+        ghi.push(surname);
+        document.getElementById("c").innerHTML = ghi;
+      }
+    </script>
+  </body>
+</html>
